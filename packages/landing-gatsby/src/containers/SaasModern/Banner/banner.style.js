@@ -23,7 +23,7 @@ export const DiscountWrapper = styled.div`
 `;
 
 export const DiscountLabel = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'merriweather-sans-70';
   display: inline-block;
   border-radius: 4em;
   padding: 9px 22px;

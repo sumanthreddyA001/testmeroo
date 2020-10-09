@@ -21,9 +21,9 @@ export const BannerWrapper = styled.section`
 export const DiscountWrapper = styled.div`
   text-align: center;
 `;
-s
+
 export const DiscountLabel = styled.div`
-  font-family: 'merriweather-sans-700';
+  font-family: 'merriweather-sans-70';
   display: inline-block;
   border-radius: 4em;
   padding: 9px 22px;

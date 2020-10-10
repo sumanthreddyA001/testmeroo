@@ -62,7 +62,7 @@ const BannerSection = ({
   const stylesObj = {
    
     backgroundColor:'#edcd37',
-    fontFamily:'sans-serif',
+    fontFamily:'merriweather-sans-70',
     borderRight:'white',
     borderBottom:'white',
     borderTop: 'white',

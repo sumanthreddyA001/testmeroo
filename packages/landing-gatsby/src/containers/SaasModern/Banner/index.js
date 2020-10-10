@@ -38,15 +38,57 @@ const BannerSection = ({
       }
     }
   `);
-  const stylesObj = {
-    // backgroundColor:"blue",
-    // border: '2px solid black' ,
+  const stylesObj1 = {
+    backgroundColor:"#FBFBFB",
+    fontFamily:'sans-serif',
+    borderRight:'white',
+    borderBottom:'white',
+    borderTop: 'white',
+    borderLeft: 'white',
+    padding:10,
+    width: 210,
+    height: 60,
+    fontSize: 20,
+    fontWeight: 700,
+    alignItems: 'center',
     borderRadius:20,
-  
-    display:'inline',
+    display:'flex',
    
   };
-
+  const stylesobj2={
+    marginLeft:5,
+    marginRight:14
+  };
+  const stylesObj = {
+   
+    backgroundColor:'#edcd37',
+    fontFamily:'sans-serif',
+    borderRight:'white',
+    borderBottom:'white',
+    borderTop: 'white',
+    borderLeft: 'white',
+    padding:10,
+    width: 210,
+    height: 60,
+    fontSize: 22,
+    fontWeight: 700,
+    alignItems: 'center',
+    borderRadius:20,
+    display:'flex',
+   
+  };
+  const Button1 = ({ align }) => (
+    <button className="my-button"  width='210px' display='flex' style={stylesObj1} align-items='center'>
+      <img className={align}  style={stylesobj2} width='40px' height='40px'  margin='10px' src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjRTAxRTVBIiBkPSJNMjEuMDEsNjMuMTljMCw1Ljc4My00LjcyNCwxMC41MDctMTAuNTAzLDEwLjUwN0M0LjcyNCw3My42OTcsMCw2OC45NzQsMCw2My4xOQ0KCQkJYzAtNS43NzUsNC43MjQtMTAuNTAzLDEwLjUwNy0xMC41MDNIMjEuMDFWNjMuMTl6Ii8+DQoJCTxwYXRoIGZpbGw9IiNFMDFFNUEiIGQ9Ik0yNi4zMDMsNjMuMTljMC01Ljc3NSw0LjcyNC0xMC41MDMsMTAuNTA3LTEwLjUwM2M1Ljc3OSwwLDEwLjUwMyw0LjcyOCwxMC41MDMsMTAuNTAzdjI2LjMwMw0KCQkJYzAsNS43ODMtNC43MjQsMTAuNTA3LTEwLjUwMywxMC41MDdjLTUuNzgzLDAtMTAuNTA3LTQuNzI0LTEwLjUwNy0xMC41MDdWNjMuMTl6Ii8+DQoJPC9nPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjMzZDNUYwIiBkPSJNMzYuODEsMjEuMDFjLTUuNzgzLDAtMTAuNTA3LTQuNzI0LTEwLjUwNy0xMC41MDNDMjYuMzAzLDQuNzI0LDMxLjAyNiwwLDM2LjgxLDANCgkJCWM1Ljc3OSwwLDEwLjUwMyw0LjcyNCwxMC41MDMsMTAuNTA3VjIxLjAxSDM2LjgxeiIvPg0KCQk8cGF0aCBmaWxsPSIjMzZDNUYwIiBkPSJNMzYuODEsMjYuMzAzYzUuNzc5LDAsMTAuNTAzLDQuNzI0LDEwLjUwMywxMC41MDdjMCw1Ljc3OS00LjcyNCwxMC41MDMtMTAuNTAzLDEwLjUwM0gxMC41MDcNCgkJCUM0LjcyNCw0Ny4zMTIsMCw0Mi41ODksMCwzNi44MWMwLTUuNzgzLDQuNzI0LTEwLjUwNywxMC41MDctMTAuNTA3SDM2LjgxeiIvPg0KCTwvZz4NCgk8Zz4NCgkJPHBhdGggZmlsbD0iIzJFQjY3RCIgZD0iTTc4Ljk4NiwzNi44MWMwLTUuNzgzLDQuNzI0LTEwLjUwNywxMC41MDctMTAuNTA3UzEwMCwzMS4wMjYsMTAwLDM2LjgxDQoJCQljMCw1Ljc3OS00LjcyNCwxMC41MDMtMTAuNTA3LDEwLjUwM0g3OC45ODZWMzYuODF6Ii8+DQoJCTxwYXRoIGZpbGw9IiMyRUI2N0QiIGQ9Ik03My42OTcsMzYuODFjMCw1Ljc3OS00LjcyNCwxMC41MDMtMTAuNTA3LDEwLjUwM2MtNS43NzUsMC0xMC41MDMtNC43MjQtMTAuNTAzLTEwLjUwM1YxMC41MDcNCgkJCUM1Mi42ODgsNC43MjQsNTcuNDE1LDAsNjMuMTksMGM1Ljc4MywwLDEwLjUwNyw0LjcyNCwxMC41MDcsMTAuNTA3VjM2LjgxeiIvPg0KCTwvZz4NCgk8Zz4NCgkJPHBhdGggZmlsbD0iI0VDQjIyRSIgZD0iTTYzLjE5LDc4Ljk4NmM1Ljc4MywwLDEwLjUwNyw0LjcyNCwxMC41MDcsMTAuNTA3UzY4Ljk3NCwxMDAsNjMuMTksMTAwDQoJCQljLTUuNzc1LDAtMTAuNTAzLTQuNzI0LTEwLjUwMy0xMC41MDdWNzguOTg2SDYzLjE5eiIvPg0KCQk8cGF0aCBmaWxsPSIjRUNCMjJFIiBkPSJNNjMuMTksNzMuNjk3Yy01Ljc3NSwwLTEwLjUwMy00LjcyNC0xMC41MDMtMTAuNTA3YzAtNS43NzUsNC43MjgtMTAuNTAzLDEwLjUwMy0xMC41MDNoMjYuMzAzDQoJCQljNS43ODMsMCwxMC41MDcsNC43MjgsMTAuNTA3LDEwLjUwM2MwLDUuNzgzLTQuNzI0LDEwLjUwNy0xMC41MDcsMTAuNTA3SDYzLjE5eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K" />
+        Add to Slack
+    </button>
+  )
+  const Button2 = ({ align }) => (
+    <button className="my-button"  width='210px' display='flex' style={stylesObj} align-items='center'>
+      &nbsp;
+       Get Started Free
+    </button>
+  )
   return (
     <BannerWrapper id="banner_section">
       <TiltShape />
@@ -71,10 +113,24 @@ const BannerSection = ({
               content="Answers at the speed of thought"
             /> 
             <Box {...buttonWrapper}>
-              <a href="#1">
+              {/* <a href="#1">
                 <Button {...fillButton}  title=" Start  free trail"  width="139" style={stylesObj}/>
               </a>
-              &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://slack.com/oauth/v2/authorize?client_id=1248781605655.1375316635968&scope=app_mentions:read,channels:history,chat:write,commands,files:read,files:write,groups:history,im:history,im:read,im:write,incoming-webhook,mpim:history,mpim:read,mpim:write,remote_files:read,remote_files:share,remote_files:write,users.profile:read&user_scope=files:read,files:write,groups:history,identify,im:history,mpim:write,users.profile:read"><img alt="Add to Slack" height="70"  width="210"  src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" style={stylesObj}/></a>
+
+              <div> */}
+  <Button2/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <Button1 />
+  
+{/* </div> */}
+
+
+
+
+
+
+
+              
             </Box>
           </Box>
           <Box {...imageWrapper}>
@@ -149,6 +205,7 @@ BannerSection.defaultProps = {
     mb: 0,
     as: 'span',
   },
+  
   fillButton: {
     type: 'button',
     fontSize: ['15px', '16px'],

@@ -167,7 +167,7 @@ export const ContentWrapper = styled.div`
         }
         &.is-current {
           a {
-            color: #edcd37;
+            color: ;
           }
         }
         a {
